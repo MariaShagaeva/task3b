@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Справочник пользователей</title>
+    <!-- Подключаем внешний файл с css кодом -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Подключаем внешний файл с js кодом и выполняем его только после загрузки всей html-страницы (defer) -->
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <!-- Заголовок страницы -->
+    <header class="page-header">
+        <h1>Справочник пользователей</h1>
+        <p class="page-header__subtitle">Практическое задание 3Б</p>
+    </header>
+
+    <!-- Основное содержание страницы -->
+    <main class="container">
+        <!-- Блок панели управления: кнопка загрузки и поиск -->
+        <section class="card">
+            <div class="toolbar">
+                <!-- Кнопка Загрузить пользователей -->
+                <button type="button" id="loadBtn" class="btn"
+                        data-idle-text="Загрузить пользователей">Загрузить пользователей</button>
+                <!-- Поле поиска -->
+                <div class="field field--search">
+                    <!-- Подпись поля-->
+                    <label for="searchInput">Поиск по имени</label>
+                    <!-- Само поле поиска-->
+                    <input type="text" id="searchInput" name="search"
+                           placeholder="Например, Leanne" autocomplete="off">
+                </div>
+            </div>
+            <div id="statusMessage" class="status-message" aria-live="polite"></div>
+        </section>
+
+        <!-- Область для списка пользователей -->
+        <section class="card">
+            <h2>Пользователи</h2>
+            <div id="usersList" class="users-list"></div>
+            <p id="emptyState" class="empty-state">Пользователи не загружены. Нажмите «Загрузить пользователей».</p>
+        </section>
+
+        <!-- Отдельная область публикаций -->
+        <section class="card">
+            <h2>Публикации</h2>
+            <div id="postsArea" class="posts-area"></div>
+            <p id="postsEmptyState" class="empty-state">Публикации не загружены. Выберите пользователя и нажмите «Показать публикации».</p>
+        </section>
+    </main>
+</body>
+</html>
