@@ -1,5 +1,5 @@
 /* Константы API */
-const API_URL = 'https://jsonplaceholder.typicode.com/user';
+const API_URL = 'https://jsonplaceholder.typicode.com/users';
 const USERS_URL = `${API_URL}/users`; 
 const POSTS_URL = `${API_URL}/posts`;
 const POSTS_LIMIT = 3;
